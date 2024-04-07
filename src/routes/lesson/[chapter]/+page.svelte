@@ -51,6 +51,48 @@ main {
     padding: 3px 5px
   }
 
+  // Markdown-alert
+  :global(.markdown-alert) {
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  :global(.markdown-alert-title) {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  :global(.markdown-alert-caution) {
+    background: rgba(var(--color-warning-600) / 0.8);
+    color: rgba(var(--on-warning) / 1);
+  }
+
+  :global(.markdown-alert-warning) {
+    background: rgba(var(--color-error-600) / 0.8);
+    color: rgba(var(--on-error) / 1);
+  }
+
+  :global(.markdown-alert-important) {
+    background: rgba(var(--color-primary-600) / 0.8);
+    color: rgba(var(--on-primary) / 1);
+  }
+
+  :global(.markdown-alert-note) {
+    background: rgba(var(--color-secondary-600) / 0.8);
+    color: rgba(var(--on-secondary) / 1);
+  }
+
+  :global(.markdown-alert-tip) {
+    background: rgba(var(--color-success-600) / 0.8);
+    color: rgba(var(--on-success) / 1);
+  }
+
   /*!
     Theme: GitHub Dark
     Description: Dark theme as seen on github.com
