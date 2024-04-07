@@ -5,10 +5,18 @@
 </svelte:head>
 
 <script lang='ts'>
+import hljs from 'highlight.js/lib/core';
+import javascript from 'highlight.js/lib/languages/javascript';
+import './github.css';
+import './github-dark.css';
+
+hljs.registerLanguage('javascript', javascript);
+
 export let data;
 const pageText = data.props.html;
 
 console.log(pageText);
+
 </script>
 
 <main class="p-6 pt-2">
@@ -27,4 +35,6 @@ console.log(pageText);
   main :global(.katex-html) {
     @apply hidden;
   }
+  
+  
 </style>
