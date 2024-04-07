@@ -40,6 +40,7 @@ export const load: PageServerLoad = async ({ params }) => {
     return {
         props: {
             html,
+            title: chapter,
         },
     };
 

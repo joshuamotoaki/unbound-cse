@@ -1,6 +1,6 @@
 <svelte:head>
   <title>
-    UnboundCSE
+    UnboundCSE | {title}
   </title>
 </svelte:head>
 
@@ -12,6 +12,7 @@ hljs.registerLanguage('javascript', javascript);
 
 export let data;
 const pageText = data.props.html;
+const title = data.props.title.split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
 console.log(pageText);
 
