@@ -35,7 +35,7 @@ export const load: PageServerLoad = async ({ params }) => {
         markedSmartypants()
     );
 
-    const html = marked.parse(fileText);
+    const html = await marked.parse(fileText);
 
     return {
         props: {
