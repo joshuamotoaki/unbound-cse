@@ -8,12 +8,18 @@ console.log(c);
 ```
 
 ## Katex
-This is inline katex: $c = \pm\sqrt{a^2 + b^2}$
+Inline Katex: $c = \pm\sqrt{a^2 + b^2}$
 
-This is block level katex:
+Block Katex:
 
 $$
 c = \pm\sqrt{a^2 + b^2}
+
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
 $$
 
 ## Marked Alert
