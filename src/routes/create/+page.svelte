@@ -5,6 +5,7 @@
     import 'highlight.js/styles/github.css'
     hljs.registerLanguage('javascript', javascript);
 
+    export let md = '';
     let html = '';
     let title = '';
 
@@ -14,16 +15,15 @@
         html = await convertToHtml(value);
     }
 
-    const save = async (event: any) => {
-        const markdown = event.target.value;
+    const save = async () => {
         await fetch('/api/create', {
-            method: 'POST',
+            method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
                 title,
-                markdown
+                md
             })
         });
     }
@@ -38,7 +38,7 @@
     </div>
     <div class='right flex-1 overflow-y-auto flex flex-col pt-2 p-4 gap-2'>
         <textarea class="textarea h-full variant-form-material language-md" rows="4" 
-        placeholder="Type your markdown here..."
+        placeholder="Type your markdown here..." bind:value={md}
         on:input={refresh} />
         <div class='flex gap-2'>
             <input type="text" bind:value={title}
